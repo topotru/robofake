@@ -3,7 +3,7 @@
 //namespace Robofake\Controllers;
 
 
-class ControllerBase extends \Phalcon\Mvc\Controller
+abstract class ControllerBase extends \Phalcon\Mvc\Controller
 {
 
 }

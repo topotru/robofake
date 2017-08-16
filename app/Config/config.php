@@ -13,6 +13,8 @@ return new \Phalcon\Config([
         'modelsDir'      => __DIR__.'/../../app/Models/',
         'viewsDir'       => __DIR__.'/../../app/Views/',
         'libraryDir'     => __DIR__.'/../../app/Library/',
+        'cacheDir'       => __DIR__.'/../../app/Cache/',
+        'sessDir'        => __DIR__.'/../../app/Cache/sess/',
         'appDir'         => __DIR__.'/../../app/',
         'vendorDir'      => __DIR__.'/../../vendor/',
         'baseUri'        => '/',

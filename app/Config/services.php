@@ -51,3 +51,17 @@ $di->set('session', function () {
     $session->start();
     return $session;
 });
+
+$di->setShared('session', function () use ($config) {
+    $dir = $config->application->sessDir;
+    if (! is_dir($dir)) {
+        mkdir($dir, 0755, true);
+    }
+    ini_set('session.gc_probability', 1);
+    ini_set('session.gc_divisor', 1000);
+    ini_set('session.hash_function', 'sha256');
+    session_save_path($dir);
+    $session = new \Phalcon\Session\Adapter\Files();
+    $session->start();
+    return $session;
+});

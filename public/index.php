@@ -24,6 +24,8 @@ try {
      */
     require __DIR__.'/../app/Config/services.php';
     
+    $di->set('config', $config);
+    
     /**
      * Handle the request
      */
